@@ -1,13 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define NOBUILD_IMPLEMENTATION
-#include "nobuild.h"
-#define SV_IMPLEMENTATION
-#include "sv.h"
-#define ARENA_IMPLEMENTATION
-#include "arena.h"
-
+#include "alx.h"
 #include "tokenize.c"
 
 static Arena gpa = {0}; // General-purpose arena
@@ -37,6 +31,6 @@ int main(int argc, char **argv)
 		printf("%d: "SV_Fmt"\n", token.type, SV_Arg(token.text));
 	}
 
-	INFO("successfully read input file");
+	INFO("successfully parsed input file");
 	return 0;
 }

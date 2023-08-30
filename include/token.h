@@ -21,6 +21,9 @@ typedef struct Token {
 
 bool parse_token(String_View *input, Token *out);
 
+// String chop-while predicates
+typedef bool chop_while_t(char);
+
 bool isident(char x);
 bool isnumber(char x);
 

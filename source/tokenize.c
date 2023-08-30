@@ -1,7 +1,3 @@
-#include "parse.h"
-
-typedef bool chop_while_t(char);
-
 bool parse_token(String_View *input, Token *token)
 {
 	*input = sv_trim_left(*input);
